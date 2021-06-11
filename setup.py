@@ -1,17 +1,24 @@
-import pathlib
 from setuptools import find_packages, setup
 
-HERE = pathlib.Path(__file__).parent
-README = (HERE / "README.md").read_text()
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
 setup(
     name='speakeasy',
-    packages=find_packages(include=['speakeasy']),
-    version='0.1.0',
+    packages=find_packages(where="speakeasy"),
+    include_package_data=True,
+    version='0.0.1',
     description='Convert spoken english to written english!',
-    long_description=README,
+    long_description=long_description,
     long_description_content_type="text/markdown",
+    url="https://github.com/ayankashyap/speakeasy",
     author='Ayan Kashyap',
     license='MIT',
-    install_requires=['snowballstemmer']
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires=">=3.6",
+    install_requires=['snowballstemmer'],
 )
