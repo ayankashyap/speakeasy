@@ -16,7 +16,11 @@ Conversion features include:
 - Abbreviations:
 "H T M L" => "HTML"
 
+### Logic behind the implementation
 
+We iterate over each word in the input string and keep track of its family (Quantifier, number, currency or abbreviation) and the family of the previous word.
+We then maintain two arrays: sentence and buffer. The buffer is where we append modifiers like quantifiers, quantifiers, abbreviations or nested numbers(eg: forty thousand five hundred fifty six) and carry out the specific modification. After all modifiers are computed we append the contents of the buffer to the sentence which is the final array, that
+we join as a string to return as the output.
 
 ### Installation
 
