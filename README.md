@@ -1,7 +1,7 @@
 ## SPEAKEASY
 
 A simple library that gives you the functionality of converting
-spoken english to written english. 
+spoken english to written english. The only secondary dependency used was the snowball stemmer to stem plurals for ease of conversion.
 
 Conversion features include:
 - Quantifiers:
@@ -15,6 +15,8 @@ Conversion features include:
 
 - Abbreviations:
 "H T M L" => "HTML"
+
+
 
 ### Installation
 
